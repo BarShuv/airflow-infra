@@ -3,7 +3,8 @@ name: Validate Docker Compose
 on:
   push:
     branches:
-      - main  # Validate on push to main branch
+      - main  
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -18,4 +19,5 @@ jobs:
           sudo apt-get install -y docker-compose
 
       - name: Validate docker-compose.yml
-        run: docker-compose -f docker-compose.yml config
+        run: |
+          docker-compose -f airflow-infra/docker-compose.yml config
