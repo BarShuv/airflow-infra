@@ -3,7 +3,7 @@ name: Validate Docker Compose
 on:
   push:
     branches:
-      - main # Validate on push to main branch
+      - main  # בדיקה תתבצע בכל push ל-main
 
 jobs:
   validate:
@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
 
       - name: Validate docker-compose.yml
         run: docker-compose -f docker-compose.yml config
