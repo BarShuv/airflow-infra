@@ -20,4 +20,4 @@ jobs:
 
       - name: Validate docker-compose.yml
         run: |
-          docker-compose -f airflow-infra/docker-compose.yml config
+          docker-compose -f docker-compose.yml config
