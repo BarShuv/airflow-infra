@@ -1,0 +1,14 @@
+.env
+# Ignore logs, temporary files, and compiled files
+logs/
+*.log
+*.pyc
+__pycache__/
+
+# Ignore Docker volumes and dependencies
+dags/
+plugins/
+.env
+.envrc
+.vscode/
+.idea/
