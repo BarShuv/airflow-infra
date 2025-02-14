@@ -3,8 +3,7 @@ name: Validate Docker Compose
 on:
   push:
     branches:
-      - main  # בדיקה תתבצע בכל push ל-main
-
+      - main  # Validate on push to main branch
 jobs:
   validate:
     runs-on: ubuntu-latest
