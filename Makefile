@@ -27,6 +27,7 @@ create-user:
 # Start Airflow
 start: setup init-db create-user
 	docker-compose up -d
+	ngrok http 8080
 
 # Stop all Airflow services
 stop:
@@ -38,3 +39,7 @@ restart: stop start
 # Cleanup logs
 clean-logs:
 	sudo rm -rf logs/*
+
+# Start ngrok tunnel for Airflow UI
+ngrok-start:
+	ngrok http 8080
