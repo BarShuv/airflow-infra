@@ -45,6 +45,7 @@ make restart
 ```
 
 🛠️ Troubleshooting
+
 Logs are available under the logs/ directory inside the project.
 To inspect logs for a specific DAG execution, run:
 
@@ -52,6 +53,7 @@ To inspect logs for a specific DAG execution, run:
 docker exec -it airflow_webserver cat /opt/airflow/logs/dag_id=<DAG_ID>/run_id=<RUN_ID>/task_id=<TASK_ID>/attempt=1.log
 ```
 📌 Notes
+
 Ensure Make, Docker and Docker Compose are installed before running the setup.
 🎯 Now you are ready to run and manage workflows with Airflow! 🚀
 
